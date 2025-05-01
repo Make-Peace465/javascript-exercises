@@ -5,7 +5,7 @@ const repeatString = function(string, num) {
     } else if (num === 0) {
         return answer;
     } else {
-        for (i = 1; i <= num; i++) {
+        for (let i = 0; i < num; i++) {
             answer = answer.concat(string)
         }
     }
