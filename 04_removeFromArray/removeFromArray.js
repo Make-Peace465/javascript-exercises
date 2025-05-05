@@ -1,17 +1,15 @@
 const removeFromArray = function (arr, ...num) {
-    let newArray = [];
+  let newArray = [];
     for (const item of arr) {
       for (const num2 of num) {
-        if (item !== num2) {
-          newArray = newArray.push(arr[num2-1]);
-        }
+          if (num.indexOf(num2) == 0) {
+          newArray = arr.filter(arr => arr !== num2);
+          } else {
+          newArray = newArray.filter(newArray => newArray !== num2) }
       }
     }
-    return newArray;
-  };
-  
-  console.log(removeFromArray([1, 2, 3, 4], 3, 2));
-  
+  return newArray;
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;
